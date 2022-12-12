@@ -38,6 +38,10 @@
         <activity android:name="com.example.bt3.ViewItemActivity" />
 
         <provider
+            android:name="com.squareup.picasso.PicassoProvider"
+            android:authorities="com.example.bt3.com.squareup.picasso"
+            android:exported="false" />
+        <provider
             android:name="androidx.startup.InitializationProvider"
             android:authorities="com.example.bt3.androidx-startup"
             android:exported="false" >

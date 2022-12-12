@@ -40,6 +40,13 @@ public class MainActivity extends AppCompatActivity {
         categoryList.add(new Category("Amino Acids", "https://www.petfoodindustry.com/rss/topic/293-amino-acids"));
         categoryList.add(new Category("Grains and Starches", "https://www.petfoodindustry.com/rss/topic/294-grains-and-starches"));
         categoryList.add(new Category("Fibers and Legumes", "https://www.petfoodindustry.com/rss/topic/295-fibers-and-legumes"));
+        categoryList.add(new Category("Vitamins", "https://www.petfoodindustry.com/rss/topic/296-vitamins"));
+        categoryList.add(new Category("Minerals", "https://www.petfoodindustry.com/rss/topic/297-minerals"));
+        categoryList.add(new Category("Nutraceuticals", "https://www.petfoodindustry.com/rss/topic/298-nutraceuticals"));
+        categoryList.add(new Category("Processing functional ingredients", "https://www.petfoodindustry.com/rss/topic/299-processing-functional-ingredients"));
+        categoryList.add(new Category("Fats and Oils", "https://www.petfoodindustry.com/rss/topic/300-fats-and-oils"));
+        categoryList.add(new Category("Preservatives", "https://www.petfoodindustry.com/rss/topic/301-preservatives"));
+
 
         adapter = new CategoryAdapter(this, android.R.layout.simple_list_item_1, categoryList);
 

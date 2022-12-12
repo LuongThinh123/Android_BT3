@@ -1,13 +1,17 @@
 package com.example.bt3;
 
-public class Item {
-    public String title, description, image, link, date;
+import android.graphics.Bitmap;
 
-    public Item(String title, String description, String date, String image, String link) {
+public class Item {
+    public String title, description, link, date, image;
+//    public String image;
+//    public Bitmap image;
+
+    public Item(String title, String description, String date, String link, String image) {
         this.title = title;
         this.description = description;
         this.date = date;
-        this.image = image;
         this.link = link;
+        this.image = image;
     }
 }
