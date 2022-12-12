@@ -47,7 +47,6 @@ public class MainActivity extends AppCompatActivity {
         categoryList.add(new Category("Fats and Oils", "https://www.petfoodindustry.com/rss/topic/300-fats-and-oils"));
         categoryList.add(new Category("Preservatives", "https://www.petfoodindustry.com/rss/topic/301-preservatives"));
 
-
         adapter = new CategoryAdapter(this, android.R.layout.simple_list_item_1, categoryList);
 
         listView.setAdapter(adapter);
@@ -56,9 +55,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Intent iCategoryLink = new Intent(getApplicationContext(), ViewItemActivity.class);
-//                Bundle bundle = new Bundle();
                 iCategoryLink.putExtra("link", categoryList.get(position).link);
-//
                 startActivity(iCategoryLink);
             }
         });

@@ -46,18 +46,6 @@ public class ViewItemActivity extends Activity {
     ItemAdapter itemAdapter;
     ArrayList<String> titles;
 
-    public Bitmap decodeImageStream(String url) {
-        Bitmap image = null;
-        try {
-            URL imageUrl = new URL(url);
-            InputStream in = imageUrl.openConnection().getInputStream();
-            image = BitmapFactory.decodeStream(in);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        return image;
-    }
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -142,8 +130,6 @@ public class ViewItemActivity extends Activity {
                 XmlPullParser xpp = factory.newPullParser();
                 xpp.setInput(getInputStream(url), "UTF-8");
 
-                boolean done = false;
-                Item item = null;
                 boolean insideItem = false;
                 int eventType = xpp.getEventType();
                 String title = "";
@@ -151,7 +137,6 @@ public class ViewItemActivity extends Activity {
                 String pubDate = "";
                 String link = "";
                 String imageURL = "";
-//                Bitmap image = null;
 
                 while (eventType != XmlPullParser.END_DOCUMENT) {
                     String name = null;
@@ -184,8 +169,6 @@ public class ViewItemActivity extends Activity {
                         name = xpp.getName();
                         if(name.equalsIgnoreCase("item")) {
                             itemList.add(new Item(title, description, pubDate, link, imageURL));
-                        } else if (name.equalsIgnoreCase("channel")) {
-                            done = true;
                         }
                     }
 

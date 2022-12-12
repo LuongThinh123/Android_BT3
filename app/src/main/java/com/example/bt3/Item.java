@@ -4,8 +4,6 @@ import android.graphics.Bitmap;
 
 public class Item {
     public String title, description, link, date, image;
-//    public String image;
-//    public Bitmap image;
 
     public Item(String title, String description, String date, String link, String image) {
         this.title = title;
